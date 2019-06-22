@@ -1,0 +1,25 @@
+{
+  "name": "cordova-support-crashlytics",
+  "version": "1.0.0",
+  "description": "A cordova plugin to simplify adding Crashlytics deps and auto-upload of dsyms to Firebase for both iOS and Android.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prodatakey/cordova-support-crashlytics.git"
+  },
+  "keywords": [
+    "cordova",
+    "crashlytics",
+    "firebase",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "ProdataKey, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prodatakey/cordova-support-crashlytics/issues"
+  },
+  "homepage": "https://github.com/prodatakey/cordova-support-crashlytics#readme",
+  "dependencies": {
+    "xcode": "^2.0.0"
+  }
+}
