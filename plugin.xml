@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-support-crashlytics" version="1.0.0">
+        id="cordova-support-crashlytics" version="1.0.1">
     <name>Cordova Crashlytics Support Plugin</name>
     <description>A cordova plugin to simplify adding Crashlytics deps and auto-upload of dsyms to Firebase for both iOS and Android.</description>
 
@@ -10,7 +10,8 @@
     </platform>
 
     <platform name="android">
-        <framework src="com.crashlytics.sdk.android:crashlytics:2.10.1" />
+        <framework src="com.google.firebase:firebase-crashlytics:17.2.2" />
+        <framework src="com.google.firebase:firebase-analytics:17.6.0" />
     </platform>
 
     <dependency id="cordova-plugin-cocoapod-support" version="1.6.0"/>
