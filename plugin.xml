@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-support-crashlytics" version="1.0.0">
+        id="cordova-support-crashlytics" version="1.1.0">
     <name>Cordova Crashlytics Support Plugin</name>
     <description>A cordova plugin to simplify adding Crashlytics deps and auto-upload of dsyms to Firebase for both iOS and Android.</description>
 
     <platform name="ios">
-        <pod name="Fabric" version="~> 1.10.2" />
-        <pod name="Crashlytics" version="~> 3.13.2" />
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="FirebaseCrashlytics"/>
+                <pod name="FirebaseAnalytics"/>
+            </pods>
+        </podspec>
     </platform>
 
     <platform name="android">
-        <framework src="com.crashlytics.sdk.android:crashlytics:2.10.1" />
+        <framework src="com.google.firebase:firebase-crashlytics:17.2.2" />
+        <framework src="com.google.firebase:firebase-analytics:18.0.0" />
+        <framework src="firebase-crashlytics.gradle" custom="true" type="gradleReference"/>
     </platform>
 
-    <dependency id="cordova-plugin-cocoapod-support" version="1.6.0"/>
-
-    <hook type="after_prepare" src="hooks/after_prepare.js" />
-    <hook type="before_plugin_rm" src="hooks/before_plugin_rm.js" />
+    <dependency id="cordova-plugin-cocoapod-support" url="git+https://github.com/EmeryGuillaume/cordova-plugin-cocoapods-support.git" version="1.6.0"/>
 </plugin>
