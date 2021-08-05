@@ -22,5 +22,5 @@
         <framework src="firebase-crashlytics.gradle" custom="true" type="gradleReference"/>
     </platform>
 
-    <dependency id="cordova-plugin-cocoapod-support" url="git+https://github.com/EmeryGuillaume/cordova-plugin-cocoapods-support.git" version="1.6.0"/>
+    <dependency id="cordova-plugin-cocoapod-support" url="git+https://github.com/blakgeek/cordova-plugin-cocoapods-support.git" version="1.6.2"/>
 </plugin>
